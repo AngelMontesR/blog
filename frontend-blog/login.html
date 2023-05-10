@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Blog">
     <meta name="author" content="Angel Montes">
     <title>Blog</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
@@ -35,7 +35,7 @@
 						<form id="login-form">
 							<fieldset>
 								<div class="form-group mb-2">
-									<input class="form-control" placeholder="Nombre de usuario" name="username" type="text" autofocus="">
+									<input class="form-control" placeholder="Correo de usuario" name="email" type="email" autofocus="">
 								</div>
 								<div class="form-group mb-2">
 									<input class="form-control" placeholder="Contraseña" name="password" type="password" value="">
@@ -56,39 +56,43 @@
 
     
     <script>
-
+    
         const loginForm = document.querySelector("#login-form");
+        
     
         loginForm.addEventListener("submit", (e) => {
+
             e.preventDefault();
     
             const formData = new FormData(loginForm);
-            const url = "http://127.0.0:8000/api/login";
-    
+            const url = "http://blog-api.dev.com/api/login";
+
             const data = {
-                username: formData.get("username"),
+                email: formData.get("email"),
                 password: formData.get("password")
             }
     
-            if (data.username === "" || data.password === "") {
+            if (data.email === "" || data.password === "") {
                 alert("Por favor ingrese todos los datos");
                 return;
             }
-    
+            
             fetch(url, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    "Accept": "application/json"
                 },
                 body: JSON.stringify(data)
             })
-            .then(response => response.json())
+            .then(response => response.text())
             .then(data => {
                 console.log(data);
             })
+            
     
         });
-    
+
             
     </script>
     

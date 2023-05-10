@@ -59,7 +59,7 @@ class CommentController extends Controller
      */
     public function show(ShowRequest $request)
     {
-        $comment = Comment::find($request->id);
+        $comment = Comment::where('id_publication',$request->id)->get();
 
         return response()->json([
             'status' => 'success',
