@@ -20,7 +20,7 @@ class JsonAuthorizationException extends Exception
     public function render($request)
     {
         return response()->json([
-            'message' => 'No autorizado.'
+            'status' => 'No autorizado.'
         ], 403);
     }
 

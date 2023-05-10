@@ -17,7 +17,7 @@ use App\Http\Controllers\PublicationController;
 |
 */
 
-Route::post('/login', [LoginController::class, 'authenticate']);
+    Route::post('/login', [LoginController::class, 'authenticate']);
 
 
 /********************* Publication. *************************/

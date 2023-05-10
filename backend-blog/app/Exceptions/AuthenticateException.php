@@ -23,7 +23,7 @@ class AuthenticateException extends Exception
      */
     public function render($request)
     {
-        return response()->json(['message' => 'No autorizado'], 401);
+        return response()->json(['status' => 'No autorizado'], 401);
     }
 
 }
