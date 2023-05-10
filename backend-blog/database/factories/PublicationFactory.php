@@ -17,7 +17,7 @@ class PublicationFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->unique()->sentence(),
+            'title' => $this->faker->unique()->sentence(15),
             'content' => $this->faker->paragraph(),
         ];
     }
