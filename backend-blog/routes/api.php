@@ -32,7 +32,7 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 
 /********************* Comments. *************************/
     Route::get('/comments', [CommentController::class, 'index']);
-    Route::get('/comments/show', [CommentController::class, 'show']);
+    Route::post('/comments/show', [CommentController::class, 'show']);
     Route::post('/comments', [CommentController::class, 'store']);
     Route::put('/comments/update', [CommentController::class, 'update']);
     Route::delete('/comments/destroy', [CommentController::class, 'destroy']);
