@@ -22,10 +22,10 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 
 /********************* Publication. *************************/
     Route::get('/publications', [PublicationController::class, 'index']);
-    Route::get('/publications/{id}', [PublicationController::class, 'show']);
+    Route::post('/publications/show', [PublicationController::class, 'show']);
     Route::post('/publications', [PublicationController::class, 'store']);
-    Route::put('/publications/{id}', [PublicationController::class, 'update']);
-    Route::delete('/publications/{id}', [PublicationController::class, 'destroy']);
+    Route::put('/publications/update', [PublicationController::class, 'update']);
+    Route::delete('/publications/destroy', [PublicationController::class, 'destroy']);
 
 /***********************************************************/
 
@@ -36,4 +36,4 @@ Route::post('/login', [LoginController::class, 'authenticate']);
     Route::post('/comments', [CommentController::class, 'store']);
     Route::put('/comments/{id}', [CommentController::class, 'update']);
     Route::delete('/comments/{id}', [CommentController::class, 'destroy']);
-
+/***********************************************************/
