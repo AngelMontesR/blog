@@ -8,7 +8,11 @@ use App\Exceptions\AuthenticateException;
 
 class LoginController extends Controller
 {
-    
+    /**
+     * Autentica un usuario.
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     */
     public function authenticate(Request $request)
     {
         $credentials = $request->only('email', 'password');
