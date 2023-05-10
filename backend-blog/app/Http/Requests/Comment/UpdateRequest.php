@@ -11,7 +11,7 @@ class UpdateRequest extends BaseRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class UpdateRequest extends BaseRequest
     public function rules(): array
     {
         return [
-            //
+            'id' => 'required|exists:comments,id',
+            'content' => 'required|string'
         ];
     }
 }
