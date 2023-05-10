@@ -22,7 +22,7 @@ class ShowRequest extends BaseRequest
     public function rules(): array
     {
         return [
-            //
+            'id' => 'required|exists:publications,id'
         ];
     }
 }
