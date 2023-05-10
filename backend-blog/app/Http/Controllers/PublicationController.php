@@ -10,6 +10,10 @@ use App\Models\Publication;
 class PublicationController extends Controller
 {
 
+    /**
+     * PublicationController constructor, only allow auth users to create, update and delete publications
+     * @param IndexRequest $request
+     */
     public function __construct()
     {
         $this->middleware('auth:sanctum');
@@ -24,13 +28,6 @@ class PublicationController extends Controller
        return PublicationResource::collection(Publication::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -44,14 +41,6 @@ class PublicationController extends Controller
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
     {
         //
     }

@@ -22,7 +22,7 @@ class IndexRequest extends BaseRequest
     public function rules(): array
     {
         return [
-          
+          //
         ];
     }
 
