@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\PublicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,16 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::post('/login', [LoginController::class, 'authenticate']);
+
+
+/********************* Publication. *************************/
+    Route::get('/publications', [PublicationController::class, 'index']);
+
+
+/***********************************************************/
+
+
+/********************* Comments. *************************/
+    Route::get('/comments', [CommentController::class, 'index']);
+    Route::get('/comments/{id}', [CommentController::class, 'show']);
+

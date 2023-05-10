@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Requests\Publication;
+namespace App\Http\Requests\Comment;
 
-use App\Exceptions\JsonAuthorizationException;
 use Illuminate\Foundation\Http\FormRequest;
 
 class IndexRequest extends FormRequest
@@ -26,18 +25,4 @@ class IndexRequest extends FormRequest
             //
         ];
     }
-
-    /**
-     * Handle a failed authorization attempt.
-     *
-     * @return void
-     *
-     * @throws \App\Exceptions\JsonAuthorizationException
-     */
-    protected function failedAuthorization()
-    {
-        throw new JsonAuthorizationException;
-    }
-
-    
 }
