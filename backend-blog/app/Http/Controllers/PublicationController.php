@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Publication\IndexRequest;
+use App\Http\Resources\PublicationResource;
 use Illuminate\Http\Request;
+use App\Models\Publication;
 
 class PublicationController extends Controller
 {
@@ -12,7 +14,7 @@ class PublicationController extends Controller
      */
     public function index(IndexRequest $request)
     {
-        //
+       return PublicationResource::collection(Publication::all());
     }
 
     /**
