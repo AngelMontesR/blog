@@ -21,6 +21,7 @@ class Handler extends ExceptionHandler
 
     public $donReport = [
         AuthenticateException::class,
+        JsonAuthorizationException::class,
     ];
 
     /**
