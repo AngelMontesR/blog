@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('content')->nullable();
             $table->timestamps();
 
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_publication')->references('id')->on('publications');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_publication')->references('id')->on('publications')->onDelete('cascade');
 
         });
     }
