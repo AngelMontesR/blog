@@ -11,7 +11,7 @@ class StoreRequest extends BaseRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class StoreRequest extends BaseRequest
     public function rules(): array
     {
         return [
-            //
+            'id_user' => 'required|exists:users,id',
+            'id_publication' => 'required|exists:publications,id',
+            'content' => 'required|string'
         ];
     }
 }
