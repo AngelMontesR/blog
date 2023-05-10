@@ -16,7 +16,8 @@
         AllowOverride All
         Require local
     </Directory>
-    </VirtualHost> ```
+    </VirtualHost> 
+```
 9. Agregar la siguiente línea en el archivo hosts de tu sistema operativo: `127.0.0.0.1 blog-api.dev.com`
 10. Reiniciar el servidor
 
