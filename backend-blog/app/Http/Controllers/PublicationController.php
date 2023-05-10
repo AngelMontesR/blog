@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Publication\IndexRequest;
 use Illuminate\Http\Request;
 
 class PublicationController extends Controller
@@ -9,7 +10,7 @@ class PublicationController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(IndexRequest $request)
     {
         //
     }
