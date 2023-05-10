@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('publications', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo')->unique();
-            $table->string('contenido')->nullable();
+            $table->string('title')->unique();
+            $table->string('content')->nullable();
             $table->timestamps();
         });
     }
