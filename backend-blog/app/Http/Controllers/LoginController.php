@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Exceptions\AuthenticateException;
 
 class LoginController extends Controller
 {
@@ -19,6 +20,8 @@ class LoginController extends Controller
             return response()->json(['token' => $token], 200);
 
         }
+
+        throw new AuthenticateException;
 
     }
 
