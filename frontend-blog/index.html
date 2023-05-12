@@ -135,13 +135,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     <script>
-        function miFuncion() {
+        function val_access() {
             if(localStorage.getItem("token") == null) {
                 window.location.href = "http://127.0.0.1:8000/login.html";
             }
-          }
+        }
           
-          window.addEventListener("DOMContentLoaded", miFuncion);
+          window.addEventListener("DOMContentLoaded", val_access);
           
     </script>
     
